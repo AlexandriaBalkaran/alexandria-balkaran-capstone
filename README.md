@@ -2,25 +2,23 @@
 
 ## Overview
 
-Pour Decisions 🍸 is a web application that helps users discover the **best happy hour deals in downtown Toronto** based on their preferred location (specifically neighbourhood), date and time of day (morning, afternoon, evening, night). The platform is designed to quickly show users which bars and restaurants have the most favorable drink and food deals, saving time and effort when searching for happy hour specials. This will have a particualr focus on drink deals but will also include some food deals.🍻
+**Pour Decisions** 🍸 is a web application that helps users discover the **best happy hour deals in downtown Toronto** based on their preferred location (specifically neighbourhood), date and time of day (morning, afternoon, evening, night). The platform is designed to quickly show users which bars and restaurants have the most favourable drink and food deals, saving time and effort when searching for happy hour specials. This will have a particualr focus on drink deals but will also include some food deals.🍻
+
+The primary focus will be to display happy hour drink deals; secondary focus will to display food deals.
+
+There will be a comments section for people to leave reviews of the bar/restaurants in regards to drinks, food, atmosphere and overall experience. This will ensure unbiased data as data will be added by consumers.
 
 ### Problem Space
 
 This website helps users find the best happy hour deals (drink and food) in downtown Toronto. By selecting specific criteria like time, date, and location (neighbourhood), users can easily browse a list of bars and restaurants with current offers.
 
-While the costs of living steadily increase its crucial to save a few bucks where you can.
+While the costs of living steadily increase its crucial to save a few bucks where you can!
 
-Don't waste time Google differents bars or restaurants to compare which places have the best happy hours in Toronto, just visit our site!
+Don't waste time Googling differents bars or restaurants to compare which places have the best happy hours in Toronto, just visit our site!
 
 ### User Profile
 
-The primary users will be anyone looking for happy hour deals in downtown Toronto, including both locals and visitors. 🥂🍾
-
-The primary focus will be to display happy hour drink deals; secondary focus will to display food deals.
-
-There will be a comments section for people to leave reviews of the bar/restaurants in regards to drinks, food, atmosphere and overall experience. 
-
-Users will be able to submit suggestions for new bars or restaurants to be included in the happy hour listings.
+The primary users will be anyone looking for **happy hour deals in downtown Toronto**, including both locals and visitors. 🥂🍾
 
 ### Features
 
@@ -50,9 +48,9 @@ Backend:
 
 ### Sitemap
 
-- Homepage: a page where you can select a particular neighbourhood on a the map 📍 (likely via a drop down menu).
-- Bar/Restaurant List page: Shows a list bars/restaurant in the area you've previously selected. Tags and Filters will help sort the data.
-- Bar/Restaurant Details Page: once you select the bar/restaurant, it will show you the address, the deals for this particular venue and have a place for people to leave a comment to review the happy hour of the selected venue
+- **Homepage:** a page where you can select a particular neighbourhood on a the map 📍 (likely via a drop down menu).
+- **Bar/Restaurant List Page:** Shows a list bars/restaurant in the area you've previously selected. Tags and Filters will help sort the data.
+- **Bar/Restaurant Details Page:** once you select the bar/restaurant, it will show you the address, the deals for this particular venue and have a place for people to leave a comment to review the happy hour of the selected venue.
 
 ### Mockups
 
@@ -83,7 +81,7 @@ Setup
 - Initialize frontend and backend frameworks.
 
 Create Backend
-- Choose APIs and create database
+- Choose APIs and create database.
 
 Frontend
 - Implement the filter system by date, time, and neighbourhood.
@@ -96,9 +94,9 @@ Frontend
 
 ## Future Implementations
 
-- In the comments section, customers will be able to rate thier experience on a scale from 1-5
+- In the comments section, customers will be able to rate thier experience on a scale from 1-5.
 - Price Filter: Add filter to be able to filter by the price range.
-- Venue Type Filter: Filter by the type of bar (sports bar, dive bar, live music venue etc)
+- Venue Type Filter: Filter by the type of bar (sports bar, dive bar, live music venue etc).
 - Map integration such as Google Maps API or Leaflet.js.
 - Saved items page: a place to save your favourite bars and restaurants you may way to try later.
 - Reccomendations page: a page where people can suggest a bar/restaurant its associated happy hour that should be added to the database.
