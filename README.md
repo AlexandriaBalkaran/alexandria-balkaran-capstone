@@ -12,7 +12,7 @@ There will be a comments section for people to leave reviews of the bar/restaura
 
 This website helps users find the best happy hour deals (drink and food) in downtown Toronto. By selecting specific criteria like time, date, and location (neighbourhood), users can easily browse a list of bars and restaurants with current offers.
 
-While the costs of living steadily increase its crucial to save a few bucks where you can!
+While the costs of living steadily increases, its crucial to save a few bucks where you can! 💰
 
 Don't waste time Googling differents bars or restaurants to compare which places have the best happy hours in Toronto, just visit our site!
 
