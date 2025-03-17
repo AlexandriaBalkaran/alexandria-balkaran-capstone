@@ -1,15 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import axios from "axios";
 
-function App() {
+
+function HomePage() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/neighbourhood" element={<NeighbourhoodPage />} /> 
-        <Route path="/venue/:venueId" element={<VenueDetailsPage />}/>
-      </Routes>
-    </Router>
+  <>
+  <h1>Pour Decisions</h1>
+  </>
   );
 }
 
-export default App;
+export default HomePage;
