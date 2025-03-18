@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const VenueDetails = () => {
+const VenueDetails = ({id}) => {
   const [venue, setVenue] = useState(null);
   const [deals, setDeals] = useState([]);
-  const { id } = useParams();
 
   useEffect(() => {
     const fetchVenueAndDeals = async () => {

@@ -1,73 +1,73 @@
-// // @use "/src/styles/partials/_mixins.scss" as *;
-// // @use "/src/styles/partials/_variables.scss" as *;
+// @use "/src/styles/partials/_mixins.scss" as *;
+// @use "/src/styles/partials/_variables.scss" as *;
 
-// form {
-//   margin: 0 1rem;
+form {
+  margin: 0 1rem;
 //   @include tablet {
 //     margin: 0 1.5rem;
 //   }
-// }
-// .form {
-//   &__name,
-//   &__comment {
-//     border-style: none;
-//     outline: none;
-//     margin-top: 0.5rem;
-//     border-radius: 0.5rem;
-//     min-width: 17.5rem;
-//     min-height: 1.875rem;
-//     padding: 0.5rem;
-//     // border: 1px solid $color-secondary-border;
-//     @include font-mobile-body;
-//     // &:focus {
-//     //   border: 2px solid $color-primary-outline;
-//     // }
-//     &--invalid {
-//       border: 2px solid #b10606;
-//     }
-//     @include tablet {
-//       min-height: 2.5rem;
-//       padding: 0.5rem 1rem;
-//     //   border: 2px solid $color-secondary-border;
-//       @include font-tablet-body;
-//     }
-//   }
-//   &__comment {
-//     padding-bottom: 2rem;
-//     height: 4rem;
-//     @include tablet {
-//       padding-bottom: 4rem;
-//       height: 7rem;
-//     }
-//   }
-//   &__container {
-//     display: flex;
-//     flex-direction: column;
-//     margin: 1rem 0;
-//     // @include font-mobile-body;
-//     @include tablet {
-//     //   @include font-tablet-body;
-//     }
-//   }
-// }
-// .submit {
-//   &__container {
-//     display: flex;
-//     justify-content: flex-end;
-//   }
-//   &__button {
-//     background-color: $color-primary-outline;
-//     color: $color-secondary-tag-background;
-//     padding: 0.5rem 1rem;
-//     border: none;
-//     border-radius: 0.5rem;
-//     width: 5rem;
-//     cursor: pointer;
-//     @include font-mobile-body;
-//     @include tablet {
-//       @include font-tablet-body;
-//       width: 9rem;
-//       border-radius: 0.75rem;
-//     }
-//   }
-// }
+}
+.form {
+  &__name,
+  &__comment {
+    border-style: none;
+    outline: none;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    min-width: 17.5rem;
+    min-height: 1.875rem;
+    padding: 0.5rem;
+    border: 1px solid blue;
+    // @include font-mobile-body;
+    // &:focus {
+    //   border: 2px solid $color-primary-outline;
+    // }
+    &--invalid {
+      border: 2px solid #b10606;
+    }
+    // @include tablet {
+    //   min-height: 2.5rem;
+    //   padding: 0.5rem 1rem;
+    //   border: 2px solid $color-secondary-border;
+    //   @include font-tablet-body;
+    // }
+  }
+  &__comment {
+    padding-bottom: 2rem;
+    height: 4rem;
+    // @include tablet {
+    //   padding-bottom: 4rem;
+    //   height: 7rem;
+    // }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    // @include font-mobile-body;
+    // @include tablet {
+    // //   @include font-tablet-body;
+    // }
+  }
+}
+.submit {
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__button {
+    // background-color: $color-primary-outline;
+    // color: $color-secondary-tag-background;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    width: 5rem;
+    cursor: pointer;
+    // @include font-mobile-body;
+    // @include tablet {
+    //   @include font-tablet-body;
+    //   width: 9rem;
+    //   border-radius: 0.75rem;
+    // }
+  }
+}

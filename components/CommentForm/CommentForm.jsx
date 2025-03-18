@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./CommentForm.scss";
 import axios from "axios";
 
-function CommentForm({ fetchComments, venueId }) {
+function CommentForm({ fetchComments, id }) {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
   const [error, setError] = useState(false);
@@ -24,7 +24,7 @@ function CommentForm({ fetchComments, venueId }) {
     }
 
     try {
-      await axios.post(`http://localhost:8080/venues/${venueId}/comments`, {
+      await axios.post(`http://localhost:8080/venues/${id}/comments`, {
         name,
         comment,
       });
