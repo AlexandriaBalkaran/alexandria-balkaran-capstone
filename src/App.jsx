@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import HomePage from '../pages/Homepage/Homepage';
+import VenueDealsPage from '../pages/VenueDealsPage/VenueDealsPage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/neighbourhood" element={<NeighbourhoodPage />} />  */}
-        {/* <Route path="/venue/:id/deals" element={<VenueDetailsPage />}/> */}
+        <Route path="/venue/:id/deals" element={<VenueDealsPage />}/>
       </Routes>
     </Router>
   );
