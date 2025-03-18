@@ -30,10 +30,10 @@ const VenueDeals = ({ venueId }) => {
         {deals.map((deal) => (
           <li key={deal.id}>
             <h3>{deal.category}</h3>
-            <p><strong>Type of Drink:</strong> {deal.type_of_drink}</p>
-            <p><strong>Price:</strong> ${deal.price}</p>
-            <p><strong>Deal Time:</strong> {deal.start} - {deal.end}</p>
-            <p><strong>Available on:</strong> {deal.day}</p>
+            <p>Type of Drink: {deal.type_of_drink}</p>
+            <p>Price: ${deal.price}</p>
+            <p>Deal Time: {deal.start} - {deal.end}</p>
+            <p>Available on: {deal.day}</p>
           </li>
         ))}
       </ul>

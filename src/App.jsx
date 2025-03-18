@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import HomePage from '../pages/Homepage';
+import HomePage from '../pages/Homepage/Homepage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
