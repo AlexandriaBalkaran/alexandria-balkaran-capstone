@@ -1,7 +1,49 @@
-import React from "react";
+// import React from "react";
+// import "./CommentsDisplay.scss";
+
+// function CommentsDisplay({ comments }) {
+//   const formatDate = (timestamp) => {
+//     const date = new Date(timestamp);
+//     return date.toLocaleDateString("en-US", {
+//       year: "numeric",
+//       month: "2-digit",
+//       day: "2-digit",
+//     });
+//   };
+
+//   const sortedComments = [...comments].sort(
+//     (a, b) => b.timestamp - a.timestamp
+//   );
+
+//   return (
+//     <div className="comments-display__container">
+//       <h3 className="comments__title">{comments.length} Comments</h3>
+//       {sortedComments.map((comment) => (
+//         <div className="comments-text__container" key={comment.id}>
+//           <div className="comments-name-date__container">
+//             <p className="comments-author">{comment.name}</p>
+//             <p className="comments-date">{formatDate(comment.timestamp)}</p>
+//           </div>
+//           <p className="comments-text">{comment.comment}</p>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default CommentsDisplay;
+
+
+
+// EDIT AND DELETE BUTTON
+import React, { useState } from "react";
+import axios from "axios";
 import "./CommentsDisplay.scss";
 
-function CommentsDisplay({ comments }) {
+function CommentsDisplay({ comments, fetchComments, id }) {
+  const [editingCommentId, setEditingCommentId] = useState(null);
+  const [updatedComment, setUpdatedComment] = useState("");
+
   const formatDate = (timestamp) => {
     const date = new Date(timestamp);
     return date.toLocaleDateString("en-US", {
@@ -11,9 +53,42 @@ function CommentsDisplay({ comments }) {
     });
   };
 
-  const sortedComments = [...comments].sort(
-    (a, b) => b.timestamp - a.timestamp
+const sortedComments = [...comments].sort(
+    (a, b) => new Date(b.created_at) - new Date(a.created_at)
   );
+
+  const handleEditClick = (comment) => {
+    setEditingCommentId(comment.id);
+    setUpdatedComment(comment.comment);
+  };
+
+  const handleCancelEdit = () => {
+    setEditingCommentId(null);
+    setUpdatedComment("");
+  };
+
+  const handleUpdateComment = async (commentId) => {
+    try {
+      await axios.put(`http://localhost:8080/venues/${id}/comments/${commentId}`, {
+        comment: updatedComment,
+      });
+
+      fetchComments();
+      setEditingCommentId(null); 
+    } catch (error) {
+      console.error("Error updating comment:", error);
+    }
+  };
+
+  const handleDeleteComment = async (commentId) => {
+    try {
+      await axios.delete(`http://localhost:8080/venues/${id}/comments/${commentId}`);
+      fetchComments();
+    } catch (error) {
+      console.error("Error deleting comment:", error);
+    }
+  };
+
 
   return (
     <div className="comments-display__container">
@@ -22,9 +97,47 @@ function CommentsDisplay({ comments }) {
         <div className="comments-text__container" key={comment.id}>
           <div className="comments-name-date__container">
             <p className="comments-author">{comment.name}</p>
-            <p className="comments-date">{formatDate(comment.timestamp)}</p>
+            <p className="comments-date">{formatDate(comment.created_at)}</p>
           </div>
-          <p className="comments-text">{comment.comment}</p>
+
+          {editingCommentId === comment.id ? (
+            <div className="comments-edit__container">
+              <input
+                type="text"
+                className="comments-edit__input"
+                value={updatedComment}
+                onChange={(e) => setUpdatedComment(e.target.value)}
+              />
+              <button
+                className="comments-edit__button"
+                onClick={() => handleUpdateComment(comment.id)}
+              >
+                Save
+              </button>
+              <button
+                className="comments-edit__button cancel"
+                onClick={handleCancelEdit}
+              >
+                Cancel
+              </button>
+            </div>
+          ) : (
+            <>
+              <p className="comments-text">{comment.comment}</p>
+              <button
+                className="comments-edit__button"
+                onClick={() => handleEditClick(comment)}
+              >
+                Edit
+              </button>
+              <button
+                className="comments-delete__button"
+                onClick={() => handleDeleteComment(comment.id)}
+              >
+                Delete
+              </button>
+            </>
+          )}
         </div>
       ))}
     </div>
