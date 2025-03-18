@@ -1,0 +1,38 @@
+// @use "/src/styles/partials/_mixins.scss" as *;
+// @use "/src/styles/partials/_variables.scss" as *;
+
+.comments {
+  &-display__container {
+    margin: 0 1rem;
+    // @include font-mobile-body;
+    // @include tablet {
+    //   @include font-tablet-body;
+    //   padding: 0 1.5rem;
+    //   margin-bottom: 4rem;
+    // }
+  }
+//   &-author,
+//   &-date {
+//     @include tablet {
+//       @include font-tablet-sm-body;
+//     }
+//   }
+  &-name-date__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // color: $color-primary-outline;
+    padding-top: 1rem;
+    // @include tablet {
+    //   border-top: 1.5px solid $color-secondary-border;
+    //   @include font-tablet-sm-body;
+    // }
+  }
+  &-text {
+    padding-top: 1rem;
+  }
+  &__title,
+  &-text {
+    padding-bottom: 1rem;
+  }
+}

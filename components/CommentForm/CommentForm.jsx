@@ -30,7 +30,6 @@ function CommentForm({ fetchComments, id }) {
       });
 
       fetchComments();
-
       setName("");
       setComment("");
       setError(false);
