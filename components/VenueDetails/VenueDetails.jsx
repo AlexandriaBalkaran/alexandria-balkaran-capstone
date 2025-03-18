@@ -32,6 +32,7 @@ const VenueDetails = () => {
       <h1>{venue.name}</h1>
       <h2>{venue.neighbourhood}</h2>
       <img src={venue.photo} alt={venue.name} />
+      <h4>{venue.address}</h4>
       
       <h3>Deals:</h3>
       <ul>
