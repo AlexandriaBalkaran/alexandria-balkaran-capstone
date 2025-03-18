@@ -40,17 +40,23 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./CommentsDisplay.scss";
 
-function CommentsDisplay({ comments, fetchComments, id }) {
+function CommentsDisplay({ comments, fetchComments, id, commentId }) {
   const [editingCommentId, setEditingCommentId] = useState(null);
   const [updatedComment, setUpdatedComment] = useState("");
 
   const formatDate = (timestamp) => {
     const date = new Date(timestamp);
     return date.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
+        weekday: "long",
+        year: "numeric", 
+        month: "long", 
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
     });
+
   };
 
 const sortedComments = [...comments].sort(
@@ -92,7 +98,7 @@ const sortedComments = [...comments].sort(
 
   return (
     <div className="comments-display__container">
-      <h3 className="comments__title">{comments.length} Comments</h3>
+      <h3 className="comments__title">Reviews</h3>
       {sortedComments.map((comment) => (
         <div className="comments-text__container" key={comment.id}>
           <div className="comments-name-date__container">
@@ -101,7 +107,7 @@ const sortedComments = [...comments].sort(
           </div>
 
           {editingCommentId === comment.id ? (
-            <div className="comments-edit__container">
+            <div className="comments__container">
               <input
                 type="text"
                 className="comments-edit__input"
@@ -115,7 +121,7 @@ const sortedComments = [...comments].sort(
                 Save
               </button>
               <button
-                className="comments-edit__button cancel"
+                className="comments__button-cancel"
                 onClick={handleCancelEdit}
               >
                 Cancel
@@ -125,13 +131,13 @@ const sortedComments = [...comments].sort(
             <>
               <p className="comments-text">{comment.comment}</p>
               <button
-                className="comments-edit__button"
+                className="comments__button-edit"
                 onClick={() => handleEditClick(comment)}
               >
                 Edit
               </button>
               <button
-                className="comments-delete__button"
+                className="comments__button-delete"
                 onClick={() => handleDeleteComment(comment.id)}
               >
                 Delete

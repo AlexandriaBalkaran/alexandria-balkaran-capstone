@@ -28,7 +28,7 @@ function VenueDealsPage() {
       <h1>Venue Deals Page</h1>
       <VenueDetails id={id} />
       <CommentForm fetchComments={fetchComments} id={id} />
-      <CommentsDisplay comments={comments} />
+      <CommentsDisplay comments={comments} id={id} />
     </>
   );
 }
