@@ -1,4 +1,4 @@
-//Breakpoints
+// Breakpoints
 @mixin tablet {
     @media (min-width: 48rem) {
       @content;
@@ -9,3 +9,23 @@
       @content;
     }
   }
+
+// Fonts
+@mixin font-header {
+    font-family: "Gagalin";
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+@mixin font-body {
+    font-family: "Raleway";
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+@mixin font-body-second {
+    font-family: "NunitoSans";
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
