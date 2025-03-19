@@ -8,6 +8,9 @@ const NavBar = () => {
         <Link to="/">
             <h2 className="nav__heading">Home</h2>
         </Link>
+        <Link to="/location">
+            <h2 className="nav__heading">Location</h2>
+        </Link>
       </nav>
     </header>
   );

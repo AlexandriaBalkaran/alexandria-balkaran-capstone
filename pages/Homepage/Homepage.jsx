@@ -27,15 +27,6 @@ function HomePage() {
     }
   };
 
-  //Neighbourhood
-  // const handleFilterChange = (event) => {
-  //   setSelectedNeighbourhood(event.target.value);
-  // };
-
-  // const filteredVenues = selectedNeighbourhood
-  //   ? venues.filter(venue => venue.neighbourhood === selectedNeighbourhood)
-  //   : venues;
-
   const handleDayChange = (day) => {
     setSelectedDay(day);
   };
