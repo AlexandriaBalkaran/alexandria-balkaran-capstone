@@ -35,22 +35,21 @@ const VenueDetails = ({ id }) => {
     setSelectedTime(time === selectedTime ? null : time);
   };
 
-  if (!venue) return <div>Loading...</div>;
-
-  const formatTime = (timeString) => {
-  if (!timeString) return ""; // Handle potential null values
-  const [hours, minutes] = timeString.split(":");
-  return `${hours}:${minutes}`; // Extracts only HH:mm
+  //Helper function to format time
+  const formatSelectedTime = (timeRange) => {
+  const [start, end] = timeRange.split(" - ");
+  return `${formatTime(start)} - ${formatTime(end)}`;
 };
 
-const timeSlots = [
-  ...new Set(
-    deals
-      .filter(deal => deal.day === selectedDay)
-      .map(deal => `${formatTime(deal.start)} - ${formatTime(deal.end)}`)
-  )
-];
+  if (!venue) return <div>Loading...</div>;
 
+  const timeSlots = [
+    ...new Set(
+      deals
+        .filter(deal => deal.day === selectedDay)
+        .map(deal => `${deal.start} - ${deal.end}`)
+    )
+  ];
 
   const selectedDeals = deals.filter(deal => 
     deal.day === selectedDay && 
