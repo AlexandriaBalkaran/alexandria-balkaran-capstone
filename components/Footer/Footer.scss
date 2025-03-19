@@ -9,32 +9,13 @@
   &__title {
     color: $colour-secondary-text;
   }
-
-//   &__link-one--space,
-//   &__link-two--space {
-//     display: flex;
-//     flex-direction: column;
-//     padding: 0.5rem 0;
-//     @include tablet {
-//       display: flex;
-//     }
-//   }
-  &__link--underline {
-    text-decoration: none;
-    color: $colour-secondary-text;
-    padding: 0.2rem;
-
-  }
   
-// .social__icons {
-//   padding: 1rem 0;
-//   @include desktop {
-//     display: flex;
-//     justify-content: flex-end;
-//     padding: 2.5rem 1rem 0 6rem;
-//   }
-//   & a {
-//     padding-right: 1rem;
-//   }
-// }
+.social__icons {
+  padding: 1rem 0;
+  background-color: $colour-secondary-text;
+ 
+  &-img {
+    filter: brightness(0) invert(1); 
+  }
+}
 }
