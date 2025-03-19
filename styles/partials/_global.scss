@@ -11,5 +11,10 @@
 }
 
 h1 {
+    color: $colour-secondary-text;
     @include font-header;
+}
+
+a {
+    text-decoration: none;
 }
