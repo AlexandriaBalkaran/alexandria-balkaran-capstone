@@ -7,7 +7,6 @@ import "./Homepage.scss";
 function HomePage() {
   return (
   <>
-  <h1>Pour Decisions</h1>
   <NeighbourhoodFilter/>
   {/* <VenueCard venue={}/> */}
   </>
