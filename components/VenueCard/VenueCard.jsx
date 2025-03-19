@@ -2,27 +2,25 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./VenueCard.scss";
 
-function VenueCard({ venue }) {
-  if (!venue) {
-    return <div>No venue available</div>;
+function VenueCard({ venues }) {
+  if (!venues || venues.length === 0) {
+    return <div>No venues available</div>;
   }
 
   return (
-    <Link to={`/venues/${venue.id}`} className="card__link">
-      <div className="card__container" key={venue.id}>
-        <img
-          className="card__image"
-          src={venue.photo}
-          alt={venue.name || "Venue image"}
-        />
-        <h4 className="card__name">{venue.name}</h4>
-        <div className="tag__container">
-          {venue.days && venue.days.map((day) => (
-            <span className="tag" key={day}>{day}</span>
-          ))}
-        </div>
-      </div>
-    </Link>
+    <div className="venue-list">
+      <ul>
+        {venues.map((venue) => (
+          <li key={venue.id} className="venue-item">
+            <h3>{venue.name}</h3>
+            <h4>{venue.neighbourhood}</h4>
+            <Link to={`/venue/${venue.id}/deals`}>
+              <img src={venue.photo} alt={venue.name} />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
