@@ -28,7 +28,7 @@ const VenueDetails = ({ id }) => {
 
   const handleDayClick = (day) => {
     setSelectedDay(day === selectedDay ? null : day);
-    setSelectedTime(null); // Reset time when day changes
+    setSelectedTime(null);
   };
 
   const handleTimeClick = (time) => {
@@ -37,13 +37,20 @@ const VenueDetails = ({ id }) => {
 
   if (!venue) return <div>Loading...</div>;
 
-  const timeSlots = [
-    ...new Set(
-      deals
-        .filter(deal => deal.day === selectedDay)
-        .map(deal => `${deal.start} - ${deal.end}`)
-    )
-  ];
+  const formatTime = (timeString) => {
+  if (!timeString) return ""; // Handle potential null values
+  const [hours, minutes] = timeString.split(":");
+  return `${hours}:${minutes}`; // Extracts only HH:mm
+};
+
+const timeSlots = [
+  ...new Set(
+    deals
+      .filter(deal => deal.day === selectedDay)
+      .map(deal => `${formatTime(deal.start)} - ${formatTime(deal.end)}`)
+  )
+];
+
 
   const selectedDeals = deals.filter(deal => 
     deal.day === selectedDay && 
@@ -58,7 +65,7 @@ const VenueDetails = ({ id }) => {
       <h2>{venue.neighbourhood}</h2>
       <h4>{venue.address}</h4>
 
-      <h3>Select a day and time to see deals:</h3>
+      <h3>Please select a day and time to see deals:</h3>
       <div className="days-container">
         {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map((day) => (
           <button
@@ -96,7 +103,6 @@ const VenueDetails = ({ id }) => {
             <ul className="deals-list">
               {selectedDeals.map((deal, index) => (
                 <li key={index} className="deal-item">
-                  <p>Type of Drink: {deal.type_of_drink}</p>
                   <p>{deal.category}</p>
                   <p className="deal-price">${deal.price}</p>
                 </li>
