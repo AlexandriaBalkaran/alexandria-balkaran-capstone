@@ -1,5 +1,6 @@
 import "./Header.scss";
 import { Link } from "react-router-dom";
+import NavBar from "../NavBar/NavBar";
 
 const Header = () => {
   return (
@@ -9,6 +10,7 @@ const Header = () => {
             <h1>Pour Decisions</h1>
         </Link>
       </nav>
+      <NavBar/>
     </header>
   );
 };
