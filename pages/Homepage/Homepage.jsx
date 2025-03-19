@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import axios from "axios";
 // import NeighbourhoodFilter from "../../components/NeighbourhoodFilter/NeighbourhoodFilter";
 import VenueCard from "../../components/VenueCard/VenueCard";
-import DayFilter from "../../components/DayFilter/DayFilter";
+// import DayFilter from "../../components/DayFilter/DayFilter";
 import "./Homepage.scss";
 import React, { useEffect, useState } from "react";
 
@@ -52,7 +52,7 @@ function HomePage() {
         selectedNeighbourhood={selectedNeighbourhood} 
         onFilterChange={handleFilterChange} 
       /> */}
-      <DayFilter onDayChange={handleDayChange} />
+      {/* <DayFilter onDayChange={handleDayChange} /> */}
       <VenueCard venues={filteredVenues} />
     </div>
   );

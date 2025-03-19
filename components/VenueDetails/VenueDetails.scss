@@ -1,0 +1,50 @@
+
+    .days-container, .times-container {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    
+    .day-button, .time-button {
+      padding: 10px 15px;
+      border: 2px solid #ddd;
+      background: white;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+    
+    .day-button.selected {
+      background: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+    
+    .time-button.selected {
+      background: #28a745;
+      color: white;
+      border-color: #28a745;
+    }
+    
+    .deals-container {
+      margin-top: 20px;
+    }
+    
+    .deals-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .deal-item {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .deal-price {
+      font-weight: bold;
+      color: #28a745;
+    }
