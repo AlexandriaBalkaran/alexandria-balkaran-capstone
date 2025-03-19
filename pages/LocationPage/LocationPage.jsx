@@ -4,10 +4,7 @@ import VenueCard from "../../components/VenueCard/VenueCard";
 import NeighbourhoodFilter from "../../components/NeighbourhoodFilter/NeighbourhoodFilter";
 
 function LocationPage() {
-  const [venues, setVenues] = useState([]);
   const [neighbourhoods, setNeighbourhoods] = useState([]);
-  const [selectedNeighbourhoods, setSelectedNeighbourhoods] = useState([]);
-  const [showNeighbourhoods, setShowNeighbourhoods] = useState(false);
 
   useEffect(() => {
     fetchVenues();
@@ -23,25 +20,6 @@ function LocationPage() {
       console.error("Error fetching venues:", e);
     }
   };
-
-  const toggleNeighbourhoods = () => {
-    setShowNeighbourhoods(!showNeighbourhoods);
-  };
-
-  const handleNeighbourhoodClick = (neighbourhood) => {
-    setSelectedNeighbourhoods((prevSelected) =>
-      prevSelected.includes(neighbourhood)
-        ? prevSelected.filter((n) => n !== neighbourhood)
-        : [...prevSelected, neighbourhood]
-    );
-  };
-
-  const filteredVenues =
-    selectedNeighbourhoods.length > 0
-      ? venues.filter((venue) =>
-          selectedNeighbourhoods.includes(venue.neighbourhood)
-        )
-      : venues;
 
   return (
     <div className="location-page">
