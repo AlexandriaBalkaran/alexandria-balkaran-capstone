@@ -14,7 +14,7 @@
 .day__button,
 .time__button {
   padding: 0.625rem 0.9375rem;
-  border: 2px solid #ddd;
+  border: 2px solid $colour-button-border;
   background: $colour-secondary-text;
   cursor: pointer;
   border-radius: 0.5rem;

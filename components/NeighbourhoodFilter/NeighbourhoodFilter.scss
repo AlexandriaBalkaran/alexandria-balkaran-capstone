@@ -1,3 +1,39 @@
-// img {
-//     width: 12.5rem;
-// }
+@use "/../styles/partials/_variables.scss" as *;
+.neighbourhood-filter {
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin: 20px 0;
+  
+    &__toggle {
+      padding: 0.625rem 0.9375rem;
+      border: 2px solid $colour-button-border;
+      background: $colour-secondary-text;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      transition: all 0.2s;
+    }
+  
+    &__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.625rem;
+    }
+  
+    &__button {
+      padding: 0.625rem 0.9375rem;
+      border: 2px solid $colour-button-border;
+      background: $colour-secondary-text;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      transition: all 0.2s;
+  
+      &.selected {
+        background: $colour-highlight;
+        border-color: $colour-secondary-background;
+        color: $colour-secondary-text;
+      }
+    }
+  }
+  
