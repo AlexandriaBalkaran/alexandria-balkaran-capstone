@@ -14,7 +14,15 @@ h1 {
     color: $colour-secondary-text;
     @include font-header;
 }
+h2 {
+  color: $colour-primary-text;
+  @include font-header-second;
+}
 
 a {
     text-decoration: none;
+}
+
+p {
+  @include font-body;
 }

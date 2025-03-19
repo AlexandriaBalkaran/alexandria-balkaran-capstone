@@ -9,6 +9,12 @@
       @content;
     }
   }
+// Flex
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 // Fonts
 @mixin font-header {
@@ -16,6 +22,12 @@
     font-size: 2rem;
     line-height: 2rem;
     font-weight: 400;
+}
+@mixin font-header-second {
+  font-family: "Gagalin";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 300;
 }
 @mixin font-body {
     font-family: "Raleway";

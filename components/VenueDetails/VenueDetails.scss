@@ -15,7 +15,7 @@
 .time__button {
   padding: 0.625rem 0.9375rem;
   border: 2px solid #ddd;
-  background: white;
+  background: $colour-secondary-text;
   cursor: pointer;
   border-radius: 0.5rem;
   transition: all 0.2s;
@@ -35,7 +35,7 @@
 
 .deal {
   &__item {
-    background: #d2dce0;
+    background: $colour-highlight-accent;
     padding: 1rem;
     border-radius: 0.5rem;
     margin-bottom: 0.625rem;

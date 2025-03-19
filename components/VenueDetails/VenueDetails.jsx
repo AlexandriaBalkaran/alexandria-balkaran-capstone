@@ -178,10 +178,10 @@ const VenueDetails = ({ id }) => {
 
   return (
     <div className="venue-details">
-      <Link to="/" className="back-link">Back to Venues</Link>
+      <Link to="/" className="back__link">Back to Venues</Link>
       <h2>{venue.name}</h2>
       <img className="venue__image" src={venue.photo} alt={venue.name} />
-      <h2>{venue.neighbourhood}</h2>
+      <h3>{venue.neighbourhood}</h3>
       <h4>{venue.address}</h4>
       <h4>{venue.website}</h4>
 

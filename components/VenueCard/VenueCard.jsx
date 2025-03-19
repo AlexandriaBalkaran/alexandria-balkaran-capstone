@@ -12,10 +12,12 @@ function VenueCard({ venues }) {
       <ul>
         {venues.map((venue) => (
           <li key={venue.id} className="venue-item">
-            <h3>{venue.name}</h3>
-            <h4>{venue.neighbourhood}</h4>
             <Link to={`/venue/${venue.id}/deals`}>
-              <img className="venue__images" src={venue.photo} alt={venue.name} />
+            <div className="venue__images-card">
+                <img className="venue__images" src={venue.photo} alt={venue.name} />
+              <h2>{venue.name}</h2>
+              <h4>{venue.neighbourhood}</h4>
+            </div>
             </Link>
           </li>
         ))}
