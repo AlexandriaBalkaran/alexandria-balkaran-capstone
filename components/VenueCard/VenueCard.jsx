@@ -15,7 +15,7 @@ function VenueCard({ venues }) {
             <h3>{venue.name}</h3>
             <h4>{venue.neighbourhood}</h4>
             <Link to={`/venue/${venue.id}/deals`}>
-              <img src={venue.photo} alt={venue.name} />
+              <img className="venue__images" src={venue.photo} alt={venue.name} />
             </Link>
           </li>
         ))}

@@ -1,46 +1,49 @@
 @use "/../styles/partials/_variables.scss" as *;
 
-    .days-container, .times-container {
-      display: flex;
-      gap: .625rem;
-      margin: 20px 0;
-      flex-wrap: wrap;
-    }
-    
-    .day-button, .time-button {
-      padding: .625rem .9375rem;
-      border: 2px solid #ddd;
-      background: white;
-      cursor: pointer;
-      border-radius: .5rem;
-      transition: all 0.2s;
-    }
-    
-    .day-button.selected {
-      background: $colour-highlight;
-      color: white;
-      border-color: $colour-secondary-background;
-    }
-    
-    .time-button.selected {
-      background: $colour-highlight-second;
-      color: white;
-      border-color: $colour-secondary-background;
-    }
-    
-    // .deals-container {
-    //   margin-top: 20px;
-    // }
-    
-    .deal-item {
-      background: #f8f9fa;
-      padding: 1rem;
-      border-radius: .5rem;
-      margin-bottom: .625rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    
-    .deal-price {
+.venue__image {
+  width: 90%;
+}
+.days__container,
+.times__container {
+  display: flex;
+  gap: 0.625rem;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.day__button,
+.time__button {
+  padding: 0.625rem 0.9375rem;
+  border: 2px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  &.selected {
+    color: $colour-secondary-text;
+    border-color: $colour-secondary-background;
+  }
+}
+
+.day__button.selected {
+  background: $colour-highlight;
+}
+
+.time__button.selected {
+  background: $colour-highlight-second;
+}
+
+.deal {
+  &__item {
+    background: #d2dce0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.625rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    &__price {
       font-weight: bold;
       color: $colour-secondary-background;
     }
+  }
+}
