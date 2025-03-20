@@ -66,7 +66,11 @@ const VenueDetails = ({ id }) => {
       <h2>{venue.name}</h2>
       <h3>{venue.neighbourhood}</h3>
       <h4>{venue.address}</h4>
-      <h4>{venue.website}</h4>
+      <h4>
+        <a href={venue.website} target="_blank" rel="noopener noreferrer">
+          {venue.website}
+        </a>
+      </h4>
 
       <div className="filter__container">
       <h3>Please select a day and time to see deals:</h3>
