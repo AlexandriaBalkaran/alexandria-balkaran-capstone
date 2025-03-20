@@ -1,7 +1,15 @@
 @use "/../styles/partials/_variables.scss" as *;
+@use "/../styles/partials/_mixins.scss" as *;
 
 .venue__image {
   width: 90%;
+  border-radius: 10%;;
+
+  &-container {
+    background-color:  $colour-highlight-accent;
+    @include flex-center;
+
+  }
 }
 .days__container,
 .times__container {
@@ -41,9 +49,14 @@
     margin-bottom: 0.625rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 70%;
+    list-style: none;
     &__price {
       font-weight: bold;
       color: $colour-secondary-background;
     }
   }
+}
+
+.filter__container {
+    margin: 0 1rem;
 }

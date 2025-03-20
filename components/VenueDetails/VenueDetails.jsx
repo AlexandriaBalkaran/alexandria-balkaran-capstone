@@ -57,17 +57,19 @@ const VenueDetails = ({ id }) => {
   return (
     <div className="venue-details">
       <Link to="/" className="back__link">
+        <img src="/src/assets/images/Arrow.svg" alt="back arrow pointing left"></img>
         Back to Venues
       </Link>
+      <div className="venue__image-container">
+        <img className="venue__image" src={venue.photo} alt={venue.name} />
+      </div>
       <h2>{venue.name}</h2>
-      <img className="venue__image" src={venue.photo} alt={venue.name} />
       <h3>{venue.neighbourhood}</h3>
       <h4>{venue.address}</h4>
       <h4>{venue.website}</h4>
 
+      <div className="filter__container">
       <h3>Please select a day and time to see deals:</h3>
-
-      {/* Using the DayFilter component */}
       <DayFilter
         availableDays={availableDays}
         selectedDay={selectedDay}
@@ -111,6 +113,7 @@ const VenueDetails = ({ id }) => {
           )}
         </div>
       )}
+      </div>
     </div>
   );
 };

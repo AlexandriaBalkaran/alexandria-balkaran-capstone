@@ -1,32 +1,16 @@
-// @use "/src/styles/partials/_mixins.scss" as *;
-// @use "/src/styles/partials/_variables.scss" as *;
+@use "/../styles/partials/_variables.scss" as *;
+@use "/../styles/partials/_mixins.scss" as *;
 
 .comments {
   &-display__container {
     margin: 0 1rem;
-    // @include font-mobile-body;
-    // @include tablet {
-    //   @include font-tablet-body;
-    //   padding: 0 1.5rem;
-    //   margin-bottom: 4rem;
-    // }
   }
-//   &-author,
-//   &-date {
-//     @include tablet {
-//       @include font-tablet-sm-body;
-//     }
-//   }
+
   &-name-date__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // color: $color-primary-outline;
     padding-top: 1rem;
-    // @include tablet {
-    //   border-top: 1.5px solid $color-secondary-border;
-    //   @include font-tablet-sm-body;
-    // }
   }
   &-text {
     padding-top: 1rem;
@@ -35,4 +19,22 @@
   &-text {
     padding-bottom: 1rem;
   }
+}
+
+
+.comments__buttons-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.comments__button-edit , 
+.comments__button-delete ,
+.comments__button-save ,
+.comments__button-cancel {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    width: 5rem;
+    cursor: pointer;
 }
