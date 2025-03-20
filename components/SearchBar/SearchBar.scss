@@ -1,12 +1,16 @@
-// @use "/../styles/partials/_variables.scss" as *;
+@use "/../styles/partials/_variables.scss" as *;
+@use "/../styles/partials/_mixins.scss" as *;
 
-// .search-bar {
-//     width: 90%;
-//     padding: .5rem;
-//     font-size: 1rem;
-//     margin-bottom: 1rem;
-//     border-radius: .5rem;
-//     border: 1px solid $colour-button-border;
-//   }
+.search-bar {
+    width: 90%;
+    padding: .5rem;
+    margin: 1rem;
+    border-radius: .5rem;
+    border: 1px solid $colour-button-border;
+
+    &__container {
+        @include flex-center;
+    }
+  }
   
   

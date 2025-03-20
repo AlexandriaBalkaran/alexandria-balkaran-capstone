@@ -32,3 +32,6 @@ p {
   margin-bottom: .5rem;
   @include font-body;
 }
+button {
+  @include font-body;
+}
