@@ -3,6 +3,7 @@ import "./LocationPage.scss";
 import VenueCard from "../../components/VenueCard/VenueCard";
 import NeighbourhoodFilter from "../../components/NeighbourhoodFilter/NeighbourhoodFilter";
 import MapComponent from "../../components/Map/Map";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 function LocationPage() {
   const [venues, setVenues] = useState([]);
@@ -78,13 +79,7 @@ function LocationPage() {
         toggleNeighbourhoods={toggleNeighbourhoods}
         showNeighbourhoods={showNeighbourhoods}
       />
-      <input
-        type="text"
-        placeholder="Search venues or neighbourhoods"
-        value={searchTerm}
-        onChange={handleSearchChange}
-        className="search-bar"
-      />
+      <SearchBar searchTerm={searchTerm} onSearchChange={handleSearchChange} /> 
       <MapComponent venues={filteredVenues} />
       <VenueCard venues={filteredVenues} onFavouriteClick={handleFavouriteClick} favourites={favourites} />
     </div>
