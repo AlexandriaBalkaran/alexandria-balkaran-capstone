@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import axios from "axios";
-import "./Homepage.scss";
+import "./HomePage.scss";
 import React, { useEffect, useState } from "react";
 import HomePageText from "../../components/HomePageText/HomePageText";
 

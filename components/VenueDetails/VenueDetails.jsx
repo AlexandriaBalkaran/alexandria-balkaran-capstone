@@ -58,7 +58,7 @@ const VenueDetails = ({ id }) => {
     <div className="venue-details">
       <Link to="/" className="back__link">
         <img src="/src/assets/images/Arrow.svg" alt="back arrow pointing left"></img>
-        Back to Venues
+        Back to Home
       </Link>
       <div className="venue__image-container">
         <img className="venue__image" src={venue.photo} alt={venue.name} />

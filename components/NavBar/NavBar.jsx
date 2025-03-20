@@ -11,6 +11,9 @@ const NavBar = () => {
         <Link to="/neighbourhood">
             <h2 className="nav__heading">Neighbourhood</h2>
         </Link>
+        <Link to="/maps">
+            <h2 className="nav__heading">Maps</h2>
+        </Link>
         <Link to="/favourites">
             <h2 className="nav__heading">Favourites</h2>
         </Link>
