@@ -1,0 +1,15 @@
+@use "/styles/partials/_global.scss" as *;
+@use "/styles/partials/_mixins.scss" as *;
+
+.skyline__image {
+    width: 100%;
+}
+
+.homepage {
+    &__text {
+    margin: 0 1rem;
+    }
+    &__title {
+    margin-bottom: 1rem;
+    }
+}
