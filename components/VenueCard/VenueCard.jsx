@@ -17,18 +17,28 @@ function VenueCard({ venues, onFavouriteClick, favourites }) {
             <li key={venue.id} className="venue-item">
               <Link to={`/venue/${venue.id}/deals`}>
                 <div className="venue__images-card">
-                  <img className="venue__images" src={venue.photo} alt={venue.name} />
+                  <div className="venue__image-container">
+                    <img
+                      className="venue__images"
+                      src={venue.photo}
+                      alt={venue.name}
+                    />
+                    <button
+                      className={`favourite__button ${
+                        isFavourite ? "liked" : ""
+                      }`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        onFavouriteClick(venue);
+                      }}
+                    >
+                      {isFavourite ? "❤️" : "♡"}
+                    </button>
+                  </div>
                   <h2>{venue.name}</h2>
                   <h4>{venue.neighbourhood}</h4>
                 </div>
               </Link>
-        
-              <button
-                className={`favourite-button ${isFavourite ? "liked" : ""}`}
-                onClick={() => onFavouriteClick(venue)}
-              >
-                {isFavourite ? "❤️ Liked" : "♡ Like"}
-              </button>
             </li>
           );
         })}
