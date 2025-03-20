@@ -8,8 +8,8 @@ const NavBar = () => {
         <Link to="/">
             <h2 className="nav__heading">Home</h2>
         </Link>
-        <Link to="/location">
-            <h2 className="nav__heading">Location</h2>
+        <Link to="/neighbourhood">
+            <h2 className="nav__heading">Neighbourhood</h2>
         </Link>
         <Link to="/favourites">
             <h2 className="nav__heading">Favourites</h2>

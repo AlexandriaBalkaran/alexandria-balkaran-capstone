@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./LocationPage.scss";
+import "./NeighbourhoodPage.scss";
 import VenueCard from "../../components/VenueCard/VenueCard";
 import NeighbourhoodFilter from "../../components/NeighbourhoodFilter/NeighbourhoodFilter";
 import MapComponent from "../../components/Map/Map";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
-function LocationPage() {
+function NeighbourhoodPage() {
   const [venues, setVenues] = useState([]);
   const [favourites, setFavourites] = useState([]);
   const [neighbourhoods, setNeighbourhoods] = useState([]);
@@ -86,5 +86,5 @@ function LocationPage() {
   );
 }
 
-export default LocationPage;
+export default NeighbourhoodPage;
 
