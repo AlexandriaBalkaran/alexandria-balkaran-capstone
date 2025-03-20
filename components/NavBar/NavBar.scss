@@ -2,4 +2,16 @@
 
 .nav__heading {
     color: $colour-secondary-text;
+
+    &:hover {
+        color: $colour-highlight-accent;
+    }
 }
+  
+.nav__container {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+    justify-content: flex-end;
+  }
+  

@@ -12,15 +12,16 @@
     justify-content: space-between;
     padding-top: 1rem;
   }
+
   &-text {
     padding-top: 1rem;
   }
+  
   &__title,
   &-text {
     padding-bottom: 1rem;
   }
 }
-
 
 .comments__buttons-container {
   display: flex;
