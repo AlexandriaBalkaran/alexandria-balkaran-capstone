@@ -60,7 +60,9 @@ const sortedComments = [...comments].sort(
 
   return (
     <div className="comments-display__container">
-      <h3 className="comments__title">Reviews</h3>
+      {comments && comments.length > 0 && (
+        <h3 className="comments__title">Reviews</h3>
+      )}
       {sortedComments.map((comment) => (
         <div className="comments-text__container" key={comment.id}>
           <div className="comments-name-date__container">
