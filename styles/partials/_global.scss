@@ -18,6 +18,9 @@ h2 {
   color: $colour-primary-text;
   @include font-header-second;
 }
+h4 {
+  color: $colour-primary-text;
+}
 
 a {
     text-decoration: none;
