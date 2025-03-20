@@ -35,6 +35,12 @@
     line-height: 1rem;
     font-weight: 400;
 }
+@mixin font-body-header {
+  font-family: "NotoSans";
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 700;
+}
 @mixin font-body-second {
     font-family: "NunitoSans";
     font-size: 2rem;

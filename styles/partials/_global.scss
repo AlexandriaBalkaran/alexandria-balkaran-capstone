@@ -20,6 +20,7 @@ h2 {
 }
 h4 {
   color: $colour-primary-text;
+  @include font-body-header;
 }
 
 a {
@@ -27,5 +28,6 @@ a {
 }
 
 p {
+  margin-bottom: .5rem;
   @include font-body;
 }
