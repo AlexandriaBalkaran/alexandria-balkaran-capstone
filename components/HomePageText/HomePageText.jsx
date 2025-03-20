@@ -5,6 +5,7 @@ const HomePageText = () => {
     <div>
       <div className="homepage__text">
         <h2 className="homepage__title">Welcome to Pour Decisions 🍸</h2>
+        <h3>Drink First, Think Later</h3>
         <p>Your Guide to the Best Happy Hour Deals in Toronto!</p>
         <p>
           Why spend hours searching for the best happy hour specials when you
