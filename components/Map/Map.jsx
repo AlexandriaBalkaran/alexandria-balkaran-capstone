@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { GoogleMap, Marker, InfoWindow, useLoadScript } from "@react-google-maps/api";
 import { useNavigate } from "react-router-dom";
+import "./Map.scss";
 
-const mapStyle = { width: "100%", height: "400px" };
+const mapStyle = { width: "100%", height: "100%" };
 const defaultCenter = { lat: 43.6532, lng: -79.3832 };
 
 function MapComponent({ venues }) {
@@ -13,6 +14,7 @@ function MapComponent({ venues }) {
   if (!isLoaded) return <div>Loading map...</div>;
 
   return (
+    <div className="map__container">
     <GoogleMap mapContainerStyle={mapStyle} center={defaultCenter} zoom={12}>
       {venues.map((venue) => {
         const lat = parseFloat(venue.lat); 
@@ -48,6 +50,7 @@ function MapComponent({ venues }) {
         );
       })}
     </GoogleMap>
+    </div>
   );
 }
 

@@ -34,6 +34,7 @@ function MapsPage() {
 
   return (
     <div className="maps-page">
+      <h2 className="maps-page__text">Find a new bar or restaurant near you</h2>
       <SearchBar searchTerm={searchTerm} onSearchChange={handleSearchChange} />
       <MapComponent venues={filteredVenues} />
     </div>

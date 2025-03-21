@@ -1,0 +1,9 @@
+@use "/../styles/partials/_mixins.scss" as *;
+
+.maps-page {
+    margin: 1rem 0;
+
+    &__text {
+    @include flex-center;
+    }
+}
