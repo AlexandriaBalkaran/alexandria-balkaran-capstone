@@ -18,6 +18,12 @@ h2 {
   color: $colour-primary-text;
   @include font-header-second;
 }
+h3 {
+  color: $colour-primary-text;
+  margin-bottom: .5rem;
+  @include font-body-header;
+  font-weight: 600;
+}
 h4 {
   color: $colour-primary-text;
   margin-bottom: .5rem;

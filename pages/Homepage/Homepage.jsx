@@ -33,9 +33,6 @@ function HomePage() {
   return (
     <div>
       <HomePageText/>
-      <video width="100%" height="auto" autoPlay loop muted playsInline>
-        <source src="src/assets/images/Homepage-video-PD.mp4" type="video/mp4" />
-      </video>
     </div>
   );
 }

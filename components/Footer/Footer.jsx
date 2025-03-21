@@ -35,6 +35,11 @@ const Footer = () => {
             ></img>
           </a>
         </div>
+        {/* <img
+        className="skyline__image"
+        src="src/assets/images/homepage-skyline-pd2.svg"
+        alt="skyline of Toronto cartoon"
+      ></img> */}
     </footer>
   );
 };

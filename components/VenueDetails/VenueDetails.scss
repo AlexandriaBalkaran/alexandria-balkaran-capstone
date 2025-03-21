@@ -1,14 +1,17 @@
 @use "/../styles/partials/_variables.scss" as *;
 @use "/../styles/partials/_mixins.scss" as *;
 
+.venue-details {
+  margin: 1rem;
+}
+
 .venue__image {
-  width: 90%;
+  width: 100%;
   border-radius: 10%;;
+  border: 1rem solid $colour-highlight-accent;
 
   &-container {
-    background-color:  $colour-highlight-accent;
     @include flex-center;
-
   }
 }
 .days__container,
@@ -58,5 +61,14 @@
 }
 
 .filter__container {
-    margin: 0 1rem;
+    margin: 2rem 1rem;
+}
+
+.back__link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: self-start;
+  gap: .5rem;
+  cursor: pointer;
+  margin: 1rem 0;
 }
