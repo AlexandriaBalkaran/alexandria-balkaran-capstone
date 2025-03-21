@@ -70,9 +70,6 @@ Backend:
     - Parameters: id (bar/restaurant unique ID)
     - Response: Detailed information about the selected venue, including address, deals, and reviews.
     - POST /api/review
-3. POST /api/review
-    - Parameters: venueId, reviewText, rating (rating is a future implentation)
-    - Response: Confirmation of review submission.
 
 ## Roadmap
 
