@@ -71,6 +71,7 @@ function NeighbourhoodPage() {
 
   return (
     <div className="neighbourhood-page">
+      <h2 className="maps-page__text">Explore a new neighbourhood near you</h2>
       <NeighbourhoodFilter
         neighbourhoods={neighbourhoods}
         selectedNeighbourhoods={selectedNeighbourhoods}

@@ -1,5 +1,3 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import axios from "axios";
 import "./HomePage.scss";
 import React, { useEffect, useState } from "react";
 import HomePageText from "../../components/HomePageText/HomePageText";
@@ -7,7 +5,6 @@ import HomePageText from "../../components/HomePageText/HomePageText";
 function HomePage() {
   const [venues, setVenues] = useState([]);
   const [neighbourhoods, setNeighbourhoods] = useState([]);
-  const [selectedNeighbourhood, setSelectedNeighbourhood] = useState("");
   const [selectedDay, setSelectedDay] = useState("");
 
   useEffect(() => {
@@ -36,6 +33,9 @@ function HomePage() {
   return (
     <div>
       <HomePageText/>
+      <video width="100%" height="auto" autoPlay loop muted playsInline>
+        <source src="src/assets/images/Homepage-video-PD.mp4" type="video/mp4" />
+      </video>
     </div>
   );
 }
