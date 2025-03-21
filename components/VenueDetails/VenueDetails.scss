@@ -70,5 +70,30 @@
   align-items: self-start;
   gap: .5rem;
   cursor: pointer;
-  margin: 1rem 0;
+  margin: 1rem 0; 
+
+  &-image {
+    filter: invert(0%) brightness(0%);
+  }
 }
+
+.favourite__button-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    z-index: 3;
+    right: 3rem;
+    bottom: .5rem;
+    cursor: pointer;
+  
+    &.liked {
+      color: $colour-secondary-text;
+    }
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  
