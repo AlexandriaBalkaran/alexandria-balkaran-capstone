@@ -1,5 +1,20 @@
+@use "/../styles/partials/_variables.scss" as *;
+
 .map__container {
     height: 100vh;
     margin: 1rem;
     display: flex;
+}
+
+.info-window__container {
+    background-color: $colour-highlight-accent;
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+
+    &__image {
+        width: 100%;
+        height: auto;
+        margin-bottom: .5rem;
+    }
 }

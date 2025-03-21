@@ -39,10 +39,10 @@ function MapComponent({ venues }) {
             {selectedVenue && selectedVenue.id === venue.id && (
               <InfoWindow position={{ lat, lng }}>
                 <div className="info-window__container">
-                <img src={venue.photo} alt={venue.name} style={{ width: "100px", height: "auto" }} />
+                <img className="info-window__image" src={venue.photo} alt={venue.name} />
                   <h4>{venue.name}</h4>
                   <p>{venue.neighbourhood}</p>
-                  <p>{venue.address}</p>
+                  <p2>{venue.address}</p2>
                 </div>
               </InfoWindow>
             )}

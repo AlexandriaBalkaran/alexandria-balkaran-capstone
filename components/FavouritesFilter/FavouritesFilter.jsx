@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import VenueCard from "../VenueCard/VenueCard";
+import "./FavouritesFilter.scss";
 
 function FavouritesFilter() {
   const [favourites, setFavourites] = useState([]);
@@ -21,7 +22,7 @@ function FavouritesFilter() {
   };
 
   return (
-    <div>
+    <div className="favourites__text">
       <h2>My Favourites</h2>
       {favourites.length === 0 ? (
         <p>No favourites yet!</p>

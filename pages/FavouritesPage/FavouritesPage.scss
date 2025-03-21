@@ -1,0 +1,9 @@
+@use "/../styles/partials/_mixins.scss" as *;
+
+.favourites__logo {
+    width: 50%;
+
+    &-container {
+        @include flex-center;
+    }
+}
