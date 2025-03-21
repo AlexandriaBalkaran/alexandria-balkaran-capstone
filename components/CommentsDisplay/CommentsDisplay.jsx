@@ -78,6 +78,7 @@ const sortedComments = [...comments].sort(
                 value={updatedComment}
                 onChange={(e) => setUpdatedComment(e.target.value)}
               />
+              <div className="button__container">
               <button
                 className="comments__button-save"
                 onClick={() => handleUpdateComment(comment.id)}
@@ -90,10 +91,12 @@ const sortedComments = [...comments].sort(
               >
                 Cancel
               </button>
+              </div>
             </div>
           ) : (
             <>
               <p className="comments-text">{comment.comment}</p>
+              <div className="button__container">
               <button
                 className="comments__button-edit"
                 onClick={() => handleEditClick(comment)}
@@ -106,6 +109,7 @@ const sortedComments = [...comments].sort(
               >
                 Delete
               </button>
+              </div>
             </>
           )}
         </div>
