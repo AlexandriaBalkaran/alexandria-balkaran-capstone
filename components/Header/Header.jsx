@@ -8,7 +8,7 @@ const Header = () => {
         <Link to="/">
           <img
             className="logo"
-            src="src/assets/images/PD - Logo.svg"
+            src="./../src/assets/images/PD - Logo.svg"
             alt="PD logo"
           ></img>
           <h1>

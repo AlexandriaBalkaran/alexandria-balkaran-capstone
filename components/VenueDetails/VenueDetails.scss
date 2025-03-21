@@ -1,24 +1,32 @@
 @use "/../styles/partials/_variables.scss" as *;
 @use "/../styles/partials/_mixins.scss" as *;
 
-.venue-details {
+.venue {
+  
+  &-details {
   margin: 1rem;
-}
+  }
 
-.venue__image {
-  width: 100%;
-  border-radius: 10%;;
-  border: 1rem solid $colour-highlight-accent;
+  &__text-container {
+    margin: 1rem;
+  }
 
-  &-container {
-    @include flex-center;
+  &__image {
+    width: 100%;
+    border-radius: 10%;;
+    border: 1rem solid $colour-highlight-accent;
+  
+    &-container {
+      @include flex-center;
+    }
   }
 }
+
 .days__container,
 .times__container {
   display: flex;
   gap: 0.625rem;
-  margin: 20px 0;
+  margin: 1.25rem 0;
   flex-wrap: wrap;
 }
 
@@ -51,7 +59,7 @@
     border-radius: 0.5rem;
     margin-bottom: 0.625rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 70%;
+    width: 100%;
     list-style: none;
     &__price {
       font-weight: bold;
@@ -85,7 +93,7 @@
     padding: 0.5rem;
     z-index: 3;
     right: 3rem;
-    bottom: .5rem;
+    bottom: -6rem;
     cursor: pointer;
   
     &.liked {

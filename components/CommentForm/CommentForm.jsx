@@ -53,7 +53,7 @@ function CommentForm({ fetchComments, id }) {
         />
       </label>
       <label className="form__container">
-        Comment{" "}
+        Review{" "}
         <input
           type="textarea"
           name="input-comment"
