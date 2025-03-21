@@ -1,6 +1,7 @@
 import "./Header.scss";
 import { Link } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
+import logo from '../../src/assets/images/PD - Logo.svg';
 
 const Header = () => {
   return (
@@ -8,7 +9,7 @@ const Header = () => {
         <Link to="/">
           <img
             className="logo"
-            src="./../src/assets/images/PD - Logo.svg"
+            src={logo}
             alt="PD logo"
           ></img>
           <h1>
