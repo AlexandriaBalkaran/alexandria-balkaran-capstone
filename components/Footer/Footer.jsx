@@ -11,6 +11,7 @@ import skyline from '../../src/assets/images/PD - footer.svg'
 const Footer = () => {
   return (
     <footer className="footer__container">
+      <div className="footer__container-text-icons">
         <div className="footer__text">
           <Link to="/">
             <h1>Pour Decisions</h1>
@@ -41,7 +42,10 @@ const Footer = () => {
               alt="pinterest icon"
             ></img>
           </a>
+          <p className="footer__contact-text"><a className="footer__contact-text" href="mailto:contact@pourdecisions.com">contact@pourdecisions.com</a></p>
         </div>
+        </div>
+
         <img
         className="skyline__image"
         src={skyline}
