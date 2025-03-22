@@ -16,26 +16,9 @@ const HomePageText = () => {
           we've got you covered! 🍻🍹
         </p>
 
-        <h3>How It Works</h3>
-        <p>
-        ✔ Find Deals Instantly – Browse happy hour specials by neighbourhood,
-          time, and date
-        </p>
-        <p>
-        ✔ Save Time & Money – No more endless Google searches or overpaying
-          for drinks 💰
-        </p>
-        <p>
-        ✔ Unbiased Reviews – Read and leave reviews on drinks, food,
-          atmosphere, and experience
-        </p>
-        <p>
-        ✔ Drink First, Think Later – Just open our site and let the deals
-          come to you! 🍸
-        </p>
-        {/* <video width="100%" height="auto" autoPlay loop muted playsInline>
+        <video width="100%" height="auto" autoPlay loop muted playsInline>
         <source src="src/assets/images/Homepage-video-PD.mp4" type="video/mp4" />
-      </video> */}
+      </video>
         <h3>Why Pour Decisions?</h3>
         <p>
           With the cost of living on the rise, every dollar counts. We believe
