@@ -15,7 +15,7 @@ form {
     min-height: 1.875rem;
     padding: 0.5rem;
     border: 1px solid $colour-secondary-background;
-    
+
     &--invalid {
       border: 2px solid #b10606;
     }
@@ -29,7 +29,7 @@ form {
     flex-direction: column;
     margin: 1rem 0;
     @include font-body;
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
 .submit {

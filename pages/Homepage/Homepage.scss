@@ -1,23 +1,27 @@
 @use "/../styles/partials/_variables.scss" as *;
 
-.homepage__button {
-  &-container {
-    display: flex;
-    justify-content: center;
-    margin: 1rem 0;
-    color: $colour-secondary-background;
-  }
+.homepage {
+  margin: 2rem 1rem;
 
-  &-neighbhourhood {
-    padding: 0.625rem 0.9375rem;
-    border: 2px solid #ddd;
-    background: white;
-    cursor: pointer;
-    border-radius: 0.5rem;
-    transition: all 0.2s;
+  &__button {
+    &-container {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+      color: $colour-secondary-background;
+    }
 
-    &:hover {
-      background-color: $colour-highlight-accent;
+    &-neighbhourhood {
+      padding: 0.625rem 0.9375rem;
+      border: 2px solid #ddd;
+      background: white;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: $colour-highlight-accent;
+      }
     }
   }
 }

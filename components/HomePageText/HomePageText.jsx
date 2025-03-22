@@ -18,7 +18,7 @@ const HomePageText = () => {
         </p>
         </section>
 
-        <video width="100%" height="auto" autoPlay loop muted playsInline>
+        <video className="homepage__video" width="100%" height="auto" autoPlay loop muted playsInline>
         <source src="src/assets/images/Homepage-video-PD.mp4" type="video/mp4" />
       </video>
         <section className="homepage__text-container">

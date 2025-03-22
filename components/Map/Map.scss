@@ -1,20 +1,22 @@
 @use "/../styles/partials/_variables.scss" as *;
 
 .map__container {
-    height: 100vh;
-    margin: 1rem;
-    display: flex;
+  height: 100vh;
+  margin: 1rem;
+  display: flex;
+  border: 0.5rem solid $colour-highlight-accent;
+  border-radius: 2%;
 }
 
 .info-window__container {
-    background-color: $colour-highlight-accent;
-    display: flex;
-    flex-direction: column;
-    width: 10rem;
+  background-color: $colour-highlight-accent;
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
 
-    &__image {
-        width: 100%;
-        height: auto;
-        margin-bottom: .5rem;
-    }
+  &__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
 }

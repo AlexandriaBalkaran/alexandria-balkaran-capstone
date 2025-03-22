@@ -74,6 +74,3 @@ function CommentForm({ fetchComments, id }) {
 }
 
 export default CommentForm;
-
-
-

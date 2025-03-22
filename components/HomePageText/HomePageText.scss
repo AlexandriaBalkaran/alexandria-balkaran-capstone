@@ -6,15 +6,16 @@
 }
 
 .homepage {
-    &__text {
-    margin: 0 1rem;
-
-    &-container {
+    &__text-container {
         margin: 1rem 0;
-    }
     }
     
     &__title {
     margin-bottom: 1rem;
+    }
+
+    &__video {
+        margin: 1rem 0;
+        border-radius: 2%;
     }
 }

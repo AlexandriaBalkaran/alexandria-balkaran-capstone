@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./MapsPage.scss";
-import MapComponent from "../../components/Map/Map";
+import Map from "../../components/Map/Map";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
 function MapsPage() {
@@ -36,7 +36,7 @@ function MapsPage() {
     <div className="maps-page">
       <h2 className="maps-page__text">Find a new bar or restaurant near you</h2>
       <SearchBar searchTerm={searchTerm} onSearchChange={handleSearchChange} />
-      <MapComponent venues={filteredVenues} />
+      <Map venues={filteredVenues} />
     </div>
   );
 }

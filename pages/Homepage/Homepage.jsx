@@ -64,7 +64,7 @@ function HomePage() {
   };
 
   return (
-    <div>
+    <div className="homepage">
       <HomePageText />
       
       <div className="homepage__button-container">
