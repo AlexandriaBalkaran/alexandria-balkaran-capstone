@@ -14,7 +14,7 @@
   }
 
   &-date {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 
   &-text {
@@ -24,7 +24,7 @@
       margin-bottom: 2rem;
     }
   }
-  
+
   &__title,
   &-text {
     padding-bottom: 1rem;
@@ -32,8 +32,8 @@
 
   &-edit__input {
     width: 50%;
-    padding: .5rem;
-    border-radius: .5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
     border: 1px solid $colour-button-border;
   }
 }
@@ -52,8 +52,8 @@
   border: none;
   border-radius: 0.5rem;
   width: 5rem;
-  margin-right: .5rem;
-  font-size: .75rem;
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
   cursor: pointer;
 
   &:hover {
@@ -67,7 +67,6 @@
     color: $colour-secondary-text;
   }
 }
-
 
 .button__container {
   display: flex;
