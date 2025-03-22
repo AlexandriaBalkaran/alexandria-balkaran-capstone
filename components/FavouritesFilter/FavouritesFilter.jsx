@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from "react";
 import VenueCard from "../VenueCard/VenueCard";
+import "./FavouritesFilter.scss";
 
 function FavouritesFilter() {
   const [favourites, setFavourites] = useState([]);
 
   useEffect(() => {
-    const savedFavourites = JSON.parse(localStorage.getItem("favourites")) || [];
+    const savedFavourites =
+      JSON.parse(localStorage.getItem("favourites")) || [];
     setFavourites(savedFavourites);
   }, []);
 
   const handleFavouriteClick = (venue) => {
     setFavourites((prevFavourites) => {
-      const updatedFavourites = prevFavourites.some((fav) => fav.id === venue.id)
+      const updatedFavourites = prevFavourites.some(
+        (fav) => fav.id === venue.id
+      )
         ? prevFavourites.filter((fav) => fav.id !== venue.id)
         : [...prevFavourites, venue];
 
@@ -21,12 +25,16 @@ function FavouritesFilter() {
   };
 
   return (
-    <div>
+    <div className="favourites__text">
       <h2>My Favourites</h2>
       {favourites.length === 0 ? (
         <p>No favourites yet!</p>
       ) : (
-        <VenueCard venues={favourites} favourites={favourites} onFavouriteClick={handleFavouriteClick} />
+        <VenueCard
+          venues={favourites}
+          favourites={favourites}
+          onFavouriteClick={handleFavouriteClick}
+        />
       )}
     </div>
   );

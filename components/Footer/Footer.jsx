@@ -1,9 +1,17 @@
 import "./Footer.scss";
 import { Link } from "react-router-dom";
+import facebook from '../../src/assets/images/Facebook.svg';
+import twitter from '../../src/assets/images/X_twitter.svg';
+import insta from '../../src/assets/images/Instagram.svg';
+import pinterest from '../../src/assets/images/Pinterest.svg';
+import skyline from '../../src/assets/images/PD - footer.svg'
+
+
 
 const Footer = () => {
   return (
     <footer className="footer__container">
+      <div className="footer__container-text-icons">
         <div className="footer__text">
           <Link to="/">
             <h1>Pour Decisions</h1>
@@ -12,34 +20,37 @@ const Footer = () => {
         <div className="social__icons">
           <a href="https://www.facebook.com/">
             <img className="social__icons-img"
-              src="../src/assets/images/Facebook.svg"
+              src={facebook}
               alt="facebook icon"
             ></img>
           </a>
           <a href="https://x.com/?lang=en">
             <img className="social__icons-img"
-              src="../src/assets/images/X_twitter.svg"
+              src={twitter}
               alt="twitter icon"
             ></img>
           </a>
           <a href="https://www.instagram.com/">
             <img className="social__icons-img"
-              src="../src/assets/images/Instagram.svg"
+              src={insta}
               alt="instagram icon"
             ></img>
           </a>
           <a href="https://www.pinterest.com/">
             <img className="social__icons-img"
-              src="../src/assets/images/Pinterest.svg"
+              src={pinterest}
               alt="pinterest icon"
             ></img>
           </a>
+          <p className="footer__contact-text"><a className="footer__contact-text" href="mailto:contact@pourdecisions.com">contact@pourdecisions.com</a></p>
         </div>
-        {/* <img
+        </div>
+
+        <img
         className="skyline__image"
-        src="src/assets/images/homepage-skyline-pd2.svg"
+        src={skyline}
         alt="skyline of Toronto cartoon"
-      ></img> */}
+      ></img>
     </footer>
   );
 };

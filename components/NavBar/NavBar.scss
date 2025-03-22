@@ -2,16 +2,28 @@
 
 .nav__heading {
     color: $colour-secondary-text;
-
-    &:hover {
-        color: $colour-highlight-accent;
-    }
-}
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-decoration: none;
   
-.nav__container {
+    &:hover {
+      color: $colour-highlight-accent;
+    }
+  }
+  
+  .nav__link {
+    text-decoration: none;
+  
+    &.active {
+      border-bottom: 2px solid $colour-highlight-accent;
+      color: $colour-highlight-accent; 
+    }
+  }
+  
+  .nav__container {
     display: flex;
-    align-items: center;
-    gap: 1rem; 
-    justify-content: flex-end;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
   }
   

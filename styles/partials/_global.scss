@@ -32,6 +32,8 @@ h4 {
 
 a {
     text-decoration: none;
+    color: $colour-primary-text;
+    font-size: .75rem;;
 }
 
 p {
@@ -40,4 +42,8 @@ p {
 }
 button {
   @include font-body;
+}
+
+li {
+  list-style: none;
 }
