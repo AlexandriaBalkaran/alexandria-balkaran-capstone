@@ -6,11 +6,13 @@ import Footer from '../components/Footer/Footer';
 import NeighbourhoodPage from '../pages/NeighbourhoodPage/NeighbourhoodPage';
 import FavouritesPage from '../pages/FavouritesPage/FavouritesPage';
 import MapsPage from "../pages/MapsPage/MapsPage";
+import ScrollTop from "../components/ScrollTop/ScrollTop";
 
 
 function App() {
   return (
     <Router>
+      <ScrollTop />
       <Header/>
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -18,7 +20,6 @@ function App() {
         <Route path="/maps" element={<MapsPage />}/> 
         <Route path="/venue/:id/deals" element={<VenueDealsPage />}/>
         <Route path="/favourites" element={<FavouritesPage />}/>
-        
       </Routes>
       <Footer/>
     </Router>
