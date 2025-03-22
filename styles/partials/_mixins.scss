@@ -1,14 +1,14 @@
 // Breakpoints
 @mixin tablet {
-    @media (min-width: 48rem) {
-      @content;
-    }
+  @media (min-width: 48rem) {
+    @content;
   }
-  @mixin desktop {
-    @media (min-width: 80rem) {
-      @content;
-    }
+}
+@mixin desktop {
+  @media (min-width: 80rem) {
+    @content;
   }
+}
 // Flex
 @mixin flex-center {
   display: flex;
@@ -16,12 +16,12 @@
   align-items: center;
 }
 
-// Fonts
+// Fonts Gagalin
 @mixin font-header {
-    font-family: "Gagalin";
-    font-size: 2rem;
-    line-height: 2rem;
-    font-weight: 400;
+  font-family: "Gagalin";
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 400;
 }
 @mixin font-header-second {
   font-family: "Gagalin";
@@ -29,17 +29,30 @@
   line-height: 2rem;
   font-weight: 300;
 }
+@mixin font-header-tablet {
+  font-family: "Gagalin";
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+}
+@mixin font-header-second-tablet {
+  font-family: "Gagalin";
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+}
+// Fonts NotoSans
 @mixin font-label {
   font-family: "NotoSans";
-  font-size: .5rem;
-  line-height: .5rem;
+  font-size: 0.5rem;
+  line-height: 0.5rem;
   font-weight: 300;
 }
 @mixin font-body {
-    font-family: "NotoSans";
-    font-size: 1rem;
-    line-height: 1rem;
-    font-weight: 400;
+  font-family: "NotoSans";
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 400;
 }
 @mixin font-body-header {
   font-family: "NotoSans";
@@ -47,9 +60,21 @@
   line-height: 1rem;
   font-weight: 700;
 }
-@mixin font-body-second {
-    font-family: "NunitoSans";
-    font-size: 2rem;
-    line-height: 2rem;
-    font-weight: 400;
+@mixin font-label-tablet {
+  font-family: "NotoSans";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+@mixin font-body-tablet {
+  font-family: "NotoSans";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
+@mixin font-body-header-tablet {
+  font-family: "NotoSans";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
 }

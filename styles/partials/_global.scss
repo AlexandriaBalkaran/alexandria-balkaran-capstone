@@ -13,35 +13,56 @@
 h1 {
     color: $colour-secondary-text;
     @include font-header;
+    @include tablet {
+      @include font-header-tablet;
+    }
 }
 h2 {
   color: $colour-primary-text;
   @include font-header-second;
+  @include tablet {
+    @include font-header-second-tablet;
+  }
 }
 h3 {
   color: $colour-primary-text;
   margin-bottom: .5rem;
   @include font-body-header;
   font-weight: 600;
+  @include tablet {
+    @include font-body-header-tablet;
+  }
 }
 h4 {
   color: $colour-primary-text;
   margin-bottom: .5rem;
   @include font-body-header;
+  @include tablet {
+    @include font-body-header-tablet;
+  }
 }
 
 a {
     text-decoration: none;
     color: $colour-primary-text;
-    font-size: .75rem;;
+    @include font-label;
+    @include tablet {
+      @include font-label-tablet;
+    }
 }
 
 p {
   margin-bottom: .5rem;
   @include font-body;
+  @include tablet {
+    @include font-body-tablet;
+  }
 }
 button {
   @include font-body;
+  @include tablet {
+    @include font-body-tablet;
+  }
 }
 
 li {

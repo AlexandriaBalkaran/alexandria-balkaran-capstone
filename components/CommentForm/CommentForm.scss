@@ -17,7 +17,7 @@ form {
     border: 1px solid $colour-secondary-background;
 
     &--invalid {
-      border: 2px solid #b10606;
+      border: 2px solid $colour-error;
     }
   }
   &__comment {
@@ -29,7 +29,9 @@ form {
     flex-direction: column;
     margin: 1rem 0;
     @include font-body;
-    font-size: 0.75rem;
+    @include tablet {
+      @include font-body-tablet;
+    }
   }
 }
 .submit {
@@ -41,7 +43,6 @@ form {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.5rem;
-    width: 5rem;
     cursor: pointer;
 
     &:hover {

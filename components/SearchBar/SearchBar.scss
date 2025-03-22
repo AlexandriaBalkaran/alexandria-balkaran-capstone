@@ -9,6 +9,10 @@
     outline: none;
     border: none;
     border: 1px solid $colour-button-border;
+    @include font-body;
+    @include tablet {
+        @include font-body-tablet;
+    }
 
     &__container {
         @include flex-center;
