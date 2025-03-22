@@ -86,14 +86,11 @@
 }
 
 .favourite__button-card {
-    position: absolute;
     background: rgba(255, 255, 255, 0.8);
     border: none;
     border-radius: 50%;
     padding: 0.5rem;
     z-index: 3;
-    right: 3rem;
-    bottom: -6rem;
     cursor: pointer;
   
     &.liked {
@@ -105,3 +102,27 @@
     }
   }
   
+  .venue__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.favourite__button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  
+  &.liked {
+    color: red;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.venue__header {
+  display: flex;
+}

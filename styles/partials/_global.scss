@@ -41,3 +41,7 @@ p {
 button {
   @include font-body;
 }
+
+li {
+  list-style: none;
+}

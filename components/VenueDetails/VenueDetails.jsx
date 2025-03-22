@@ -77,7 +77,17 @@ const VenueDetails = ({ id }) => {
         <img className="venue__image" src={venue.photo} alt={venue.name} />
       </div>
       <div className="venue__text-container">
+        <div className="venue__header">
         <h2>{venue.name}</h2>
+        
+        <button
+        className={`favourite__button-card ${isFavourite ? "liked" : ""}`}
+        onClick={toggleFavourite}
+      >
+        {isFavourite ? "❤️" : "♡"}
+      </button>
+        </div>
+
         <h3>{venue.neighbourhood}</h3>
         <h4>{venue.address}</h4>
         <h4>
@@ -86,13 +96,6 @@ const VenueDetails = ({ id }) => {
           </a>
         </h4>
       </div>
-
-      <button
-        className={`favourite__button-card ${isFavourite ? "liked" : ""}`}
-        onClick={toggleFavourite}
-      >
-        {isFavourite ? "❤️" : "♡"}
-      </button>
 
       <div className="filter__container">
         <h3>Please select a day and time to see deals:</h3>

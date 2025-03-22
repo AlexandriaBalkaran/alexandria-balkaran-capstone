@@ -4,6 +4,7 @@ import facebook from '../../src/assets/images/Facebook.svg';
 import twitter from '../../src/assets/images/X_twitter.svg';
 import insta from '../../src/assets/images/Instagram.svg';
 import pinterest from '../../src/assets/images/Pinterest.svg';
+import skyline from '../../src/assets/images/PD - footer.svg'
 
 
 
@@ -41,11 +42,11 @@ const Footer = () => {
             ></img>
           </a>
         </div>
-        {/* <img
+        <img
         className="skyline__image"
-        src="src/assets/images/homepage-skyline-pd2.svg"
+        src={skyline}
         alt="skyline of Toronto cartoon"
-      ></img> */}
+      ></img>
     </footer>
   );
 };

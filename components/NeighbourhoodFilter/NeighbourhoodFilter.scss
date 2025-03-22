@@ -14,6 +14,16 @@
       cursor: pointer;
       border-radius: 0.5rem;
       transition: all 0.2s;
+
+      &:hover {
+        background-color: $colour-highlight-accent;
+      }
+  
+      &.selected {
+        background: $colour-highlight;
+        border-color: $colour-secondary-background;
+        color: $colour-secondary-text;
+      }
     }
   
     &__buttons {
@@ -30,6 +40,10 @@
       cursor: pointer;
       border-radius: 0.5rem;
       transition: all 0.2s;
+
+      &:hover {
+        background-color: $colour-highlight-accent;
+      }
   
       &.selected {
         background: $colour-highlight;
