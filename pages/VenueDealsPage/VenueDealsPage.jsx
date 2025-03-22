@@ -24,18 +24,17 @@ function VenueDealsPage() {
     }
   }
 
-  // ✅ Load favourites from localStorage
+  // Load favourites
   const loadFavourites = () => {
     const savedFavourites = JSON.parse(localStorage.getItem("favourites")) || [];
     setFavourites(savedFavourites);
   };
 
-  // ✅ Toggle favourite and update localStorage
   const handleFavouriteClick = (venue) => {
     setFavourites((prevFavourites) => {
       const updatedFavourites = prevFavourites.some((fav) => fav.id === venue.id)
-        ? prevFavourites.filter((fav) => fav.id !== venue.id) // Remove if already a favourite
-        : [...prevFavourites, venue]; // Add if not a favourite
+        ? prevFavourites.filter((fav) => fav.id !== venue.id)
+        : [...prevFavourites, venue];
 
       localStorage.setItem("favourites", JSON.stringify(updatedFavourites));
       return updatedFavourites;

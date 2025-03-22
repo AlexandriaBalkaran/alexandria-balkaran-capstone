@@ -94,6 +94,7 @@ const VenueDetails = ({ id }) => {
           <a href={venue.website} target="_blank" rel="noopener noreferrer">
           {venue.website}
           </a>
+        <p className="venue__description">{venue.description}</p>
         </h4>
       </div>
 

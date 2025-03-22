@@ -20,6 +20,17 @@
       @include flex-center;
     }
   }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__description {
+    font-size: .75rem;
+    margin-top: .5rem
+  }
 }
 
 .days__container,
@@ -101,12 +112,6 @@
       transform: scale(1.1);
     }
   }
-  
-  .venue__header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
 
 .favourite__button {
   background: none;
@@ -121,8 +126,4 @@
   &:hover {
     transform: scale(1.1);
   }
-}
-
-.venue__header {
-  display: flex;
 }
