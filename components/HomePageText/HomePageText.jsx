@@ -5,6 +5,7 @@ const HomePageText = () => {
     <div>
       <div className="homepage__text">
         <h2 className="homepage__title">Welcome to Pour Decisions</h2>
+        <section className="homepage__text-container">
         <h3>Drink First, Think Later</h3>
         <p>Your Guide to the Best Happy Hour Deals in Toronto!</p>
         <p>
@@ -15,10 +16,12 @@ const HomePageText = () => {
           looking for an afternoon pint, evening cocktails, or late-night bites,
           we've got you covered! 🍻🍹
         </p>
+        </section>
 
         <video width="100%" height="auto" autoPlay loop muted playsInline>
         <source src="src/assets/images/Homepage-video-PD.mp4" type="video/mp4" />
       </video>
+        <section className="homepage__text-container">
         <h3>Why Pour Decisions?</h3>
         <p>
           With the cost of living on the rise, every dollar counts. We believe
@@ -27,9 +30,10 @@ const HomePageText = () => {
           the best bites, we make happy hour hunting effortless.
         </p>
         <p>
-          💡 Stop Googling, start drinking – discover Toronto’s best happy hour
+          Stop Googling, start drinking – discover Toronto’s best happy hour
           deals today!
         </p>
+        </section>
       </div>
     </div>
   );
