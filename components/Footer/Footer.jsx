@@ -17,6 +17,7 @@ const Footer = () => {
             <h1>Pour Decisions</h1>
           </Link>
         </div>
+        <div className="footer__container-icons-email">
         <div className="social__icons">
           <a href="https://www.facebook.com/">
             <img className="social__icons-img"
@@ -42,10 +43,10 @@ const Footer = () => {
               alt="pinterest icon"
             ></img>
           </a>
-          <p className="footer__contact-text"><a className="footer__contact-text" href="mailto:contact@pourdecisions.com">contact@pourdecisions.com</a></p>
+        </div>
+        <p className="footer__contact-text"><a className="footer__contact-text" href="mailto:contact@pourdecisions.com">contact@pourdecisions.com</a></p>
         </div>
         </div>
-
         <img
         className="skyline__image"
         src={skyline}

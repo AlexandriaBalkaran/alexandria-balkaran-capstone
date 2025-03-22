@@ -5,6 +5,9 @@
   
   &-details {
   margin: 1rem;
+  @include tablet {
+    margin: 2rem 2.5rem; 
+  }
   }
 
   &__text-container {
@@ -127,7 +130,7 @@
   cursor: pointer;
   
   &.liked {
-    color: red;
+    color: $colour-error;
   }
 
   &:hover {

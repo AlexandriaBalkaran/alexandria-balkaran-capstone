@@ -12,6 +12,7 @@ function FavouritesPage() {
 
   return (
     <>
+      <div className="favourites-page">
       <FavouritesFilter />
       <div className="favourites__logo-container">
       {favourites.length === 0 && (
@@ -19,6 +20,7 @@ function FavouritesPage() {
            <source src="./src/assets/images/PD - Logo.mp4" type="video/mp4" />
         </video>
       )}
+      </div>
       </div>
     </>
   );

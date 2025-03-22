@@ -1,6 +1,8 @@
+@use "/../styles/partials/_mixins.scss" as *;
+
 .neighbourhood-page {
     margin: 2rem 0;
-}
-.maps-page__text {
-    margin: 0 1rem 1rem 1rem;
+    @include tablet {
+        margin: 2rem 2.5rem; 
+      }
 }

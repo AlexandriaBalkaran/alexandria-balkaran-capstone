@@ -8,6 +8,9 @@
 .homepage {
     &__text-container {
         margin: 1rem 0;
+        @include tablet {
+        margin: 2rem 0;
+        }
     }
     
     &__title {

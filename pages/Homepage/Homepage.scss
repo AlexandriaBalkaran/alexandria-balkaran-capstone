@@ -1,7 +1,11 @@
 @use "/../styles/partials/_variables.scss" as *;
+@use "/../styles/partials/_mixins.scss" as *;
 
 .homepage {
   margin: 2rem 1rem;
+  @include tablet {
+    margin: 3rem 2.5rem; 
+  }
 
   &__button {
     &-container {
@@ -9,6 +13,9 @@
       justify-content: center;
       margin: 1rem 0;
       color: $colour-secondary-background;
+      @include tablet {
+        margin: 2rem 0;
+      }
     }
 
     &-neighbhourhood {

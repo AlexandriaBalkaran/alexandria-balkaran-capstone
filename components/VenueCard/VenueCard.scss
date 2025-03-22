@@ -38,11 +38,17 @@
   background: rgba(255, 255, 255, 0.8);
   border: none;
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: .75rem;
   z-index: 3;
   right: .5rem;
   bottom: .5rem;
   cursor: pointer;
+  @include tablet {
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.75rem 1rem;
+
+  }
 
   &.liked {
     color: $colour-secondary-text;

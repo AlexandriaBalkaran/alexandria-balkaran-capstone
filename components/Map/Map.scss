@@ -1,4 +1,5 @@
 @use "/../styles/partials/_variables.scss" as *;
+@use "/../styles/partials/_mixins.scss" as *;
 
 .map__container {
   height: 100vh;
@@ -6,6 +7,9 @@
   display: flex;
   border: 0.5rem solid $colour-highlight-accent;
   border-radius: 2%;
+  @include tablet {
+    margin: 2.5rem;
+  }
 }
 
 .info-window__container {
