@@ -18,9 +18,12 @@ function NeighbourhoodPage() {
         const response = await fetch("http://localhost:8080/venues");
         const data = await response.json();
         setVenues(data);
-        setNeighbourhoods([...new Set(data.map((venue) => venue.neighbourhood))]);
+        setNeighbourhoods([
+          ...new Set(data.map((venue) => venue.neighbourhood)),
+        ]);
 
-        const savedFavourites = JSON.parse(localStorage.getItem("favourites")) || [];
+        const savedFavourites =
+          JSON.parse(localStorage.getItem("favourites")) || [];
         setFavourites(savedFavourites);
       } catch (e) {
         console.error("Error fetching venues:", e);
@@ -64,7 +67,8 @@ function NeighbourhoodPage() {
       venue.neighbourhood.toLowerCase().includes(searchTerm.toLowerCase());
 
     const matchesNeighbourhood =
-      selectedNeighbourhoods.length === 0 || selectedNeighbourhoods.includes(venue.neighbourhood);
+      selectedNeighbourhoods.length === 0 ||
+      selectedNeighbourhoods.includes(venue.neighbourhood);
 
     return matchesSearch && matchesNeighbourhood;
   });
@@ -80,7 +84,11 @@ function NeighbourhoodPage() {
         showNeighbourhoods={showNeighbourhoods}
       />
       <SearchBar searchTerm={searchTerm} onSearchChange={handleSearchChange} />
-      <VenueCard venues={filteredVenues} onFavouriteClick={handleFavouriteClick} favourites={favourites} />
+      <VenueCard
+        venues={filteredVenues}
+        onFavouriteClick={handleFavouriteClick}
+        favourites={favourites}
+      />
     </div>
   );
 }
