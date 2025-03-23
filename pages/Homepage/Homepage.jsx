@@ -25,7 +25,7 @@ function HomePage() {
   return (
     <div className="homepage">
       <HomePageText />
-      
+
       <div className="homepage__button-container">
         <Link to="/neighbourhood">
           <button className="homepage__button-neighbhourhood">

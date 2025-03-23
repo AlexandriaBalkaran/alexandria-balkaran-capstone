@@ -17,7 +17,9 @@ function VenueDealsPage() {
 
   async function fetchComments() {
     try {
-      const response = await axios.get(`http://localhost:8080/venues/${id}/comments`);
+      const response = await axios.get(
+        `http://localhost:8080/venues/${id}/comments`
+      );
       setComments(response.data);
     } catch (error) {
       console.error("Error fetching comments:", error);
@@ -26,13 +28,16 @@ function VenueDealsPage() {
 
   // Load favourites
   const loadFavourites = () => {
-    const savedFavourites = JSON.parse(localStorage.getItem("favourites")) || [];
+    const savedFavourites =
+      JSON.parse(localStorage.getItem("favourites")) || [];
     setFavourites(savedFavourites);
   };
 
   const handleFavouriteClick = (venue) => {
     setFavourites((prevFavourites) => {
-      const updatedFavourites = prevFavourites.some((fav) => fav.id === venue.id)
+      const updatedFavourites = prevFavourites.some(
+        (fav) => fav.id === venue.id
+      )
         ? prevFavourites.filter((fav) => fav.id !== venue.id)
         : [...prevFavourites, venue];
 
@@ -43,13 +48,17 @@ function VenueDealsPage() {
 
   return (
     <>
-      <VenueDetails 
-        id={id} 
-        favourites={favourites} 
-        onFavouriteClick={handleFavouriteClick} 
+      <VenueDetails
+        id={id}
+        favourites={favourites}
+        onFavouriteClick={handleFavouriteClick}
       />
       <CommentForm fetchComments={fetchComments} id={id} />
-      <CommentsDisplay comments={comments} fetchComments={fetchComments} id={id} />
+      <CommentsDisplay
+        comments={comments}
+        fetchComments={fetchComments}
+        id={id}
+      />
     </>
   );
 }

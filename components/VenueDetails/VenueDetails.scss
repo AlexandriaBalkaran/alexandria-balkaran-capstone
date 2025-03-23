@@ -2,12 +2,11 @@
 @use "/../styles/partials/_mixins.scss" as *;
 
 .venue {
-  
   &-details {
-  margin: 1rem;
-  @include tablet {
-    margin: 2rem 2.5rem; 
-  }
+    margin: 1rem;
+    @include tablet {
+      margin: 2rem 2.5rem;
+    }
   }
 
   &__text-container {
@@ -16,9 +15,9 @@
 
   &__image {
     width: 100%;
-    border-radius: 10%;;
+    border-radius: 10%;
     border: 1rem solid $colour-highlight-accent;
-  
+
     &-container {
       @include flex-center;
     }
@@ -31,7 +30,7 @@
   }
 
   &__description {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     @include font-label;
     @include tablet {
       @include font-label-tablet;
@@ -87,16 +86,16 @@
 }
 
 .filter__container {
-    margin: 2rem 1rem;
+  margin: 2rem 1rem;
 }
 
 .back__link {
   display: flex;
   justify-content: flex-start;
   align-items: self-start;
-  gap: .5rem;
+  gap: 0.5rem;
   cursor: pointer;
-  margin: 1rem 0; 
+  margin: 1rem 0;
   @include tablet {
     align-items: baseline;
   }
@@ -107,28 +106,28 @@
 }
 
 .favourite__button-card {
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-    border-radius: 50%;
-    padding: 0.5rem;
-    z-index: 3;
-    cursor: pointer;
-  
-    &.liked {
-      color: $colour-secondary-text;
-    }
-  
-    &:hover {
-      transform: scale(1.1);
-    }
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  z-index: 3;
+  cursor: pointer;
+
+  &.liked {
+    color: $colour-secondary-text;
   }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
 
 .favourite__button {
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  
+
   &.liked {
     color: $colour-error;
   }
