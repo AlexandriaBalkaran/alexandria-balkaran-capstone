@@ -1,6 +1,17 @@
 # Pour Decisions
 
-### Installation Instructions: npm i 
+---
+
+### Installation Instructions: 
+1.  **Clone the repository**
+    
+2.  **Install dependencies:**
+    npm i
+    
+3.  **Start the server:**
+    npm run dev
+
+---
 
 ## Overview
 
